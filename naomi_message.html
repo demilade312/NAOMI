@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for Naomi</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            position: relative;
+        }
+
+        h2 {
+            color: #e60073;
+        }
+
+        button {
+            background-color: #ff66b2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3385;
+            transform: scale(1.05);
+        }
+
+        #message {
+            color: #ff3399;
+            font-size: 20px;
+            margin-top: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease, transform 0.8s ease;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255, 51, 153, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>💖 Sorry about the cramps, Naomi 💖</h2>
+        <button onclick="showMessage()" id="showBtn">Click for a surprise</button>
+        <p id="message">Hope it gets better today! 💕</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            let message = document.getElementById("message");
+            let button = document.getElementById("showBtn");
+
+            message.style.opacity = "1";
+            message.style.transform = "scale(1)";
+
+            button.style.display = "none";
+        }
+    </script>
+</body>
+</html>
